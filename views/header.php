@@ -17,7 +17,7 @@
     <header>
         <div class="contenedor">
             <div class="logo izquierda">
-                <p><a href="<?php echo RUTA;?>">Tiziana Amicarella</a></p>
+                <p><a href="<?php echo RUTA; ?>">Tiziana Amicarella</a></p>
             </div>
 
             <div class="derecha">
