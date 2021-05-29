@@ -29,7 +29,7 @@ function obtener_post($post_por_pagina, $conexion){
     $inicio = (pagina_actual() > 1) ? pagina_actual() * $post_por_pagina - $post_por_pagina : 0;
     //Trae los articulos desde donde y cuantos OJO! SQL_CALC_FOUND_ROWS = para saber cuantos art tenemos en la BD
     $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM articulos LIMIT $inicio, $post_por_pagina");
-    $sentencia->excute();
+    $sentencia->execute();
     return $sentencia->fetchAll();
 }
 
