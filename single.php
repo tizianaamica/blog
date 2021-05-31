@@ -16,7 +16,14 @@ if (empty($id_articulo)) {
     header('Location: index.php');
 }
 
-obtener_post_por_id($conexion, $id_articulo);
+$post = obtener_post_por_id($conexion, $id_articulo);
+
+if (!$post) {  //si no hay post mandamos al index
+    header('Location: index.php');
+}
+
+$post = $post[0];
+
 
 require 'views/single.view.php';
 

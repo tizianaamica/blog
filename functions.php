@@ -42,9 +42,24 @@ function id_articulo($id)
     return (int)limpiarDatos($id);
 }
 
-function obtener_post_por_id($conexion, $id)
-{
-    $resultado = $conexion->query();
+//
+function obtener_post_por_id($conexion, $id){ //resultado de una query 
+    $resultado = $conexion->query("SELECT * FROM articulos  WHERE id= $id LIMIT 1");
+    $resultado = $resultado->fetchAll();
+    //si hay resultado, lo devolvemos sino falso
+    return ($resultado) ? $resultado : false;
+}
+
+function fecha($fecha){
+    $timestamp = strtotime($fecha);
+    $meses =  ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+
+    $dia = date('d', $timestamp);
+    $mes = date('m', $timestamp) -1;
+    $year = date('Y', $timestamp);
+
+    $fecha = "$dia de " . $meses['$mes'] ."del $year";
+    return $fecha;
 }
 
 ?>
