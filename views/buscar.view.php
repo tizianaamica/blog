@@ -16,6 +16,7 @@
 <?php require 'views/header.php' ?>
 
 <div class="contenedor">
+    <h2><?php echo $titulo; ?></h2>
     <?php foreach ($resultados as $post) : ?>
         <div class="post">
             <article>

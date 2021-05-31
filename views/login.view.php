@@ -16,15 +16,15 @@
 <?php require 'views/header.php' ?>
 
 <div class="contenedor">
+
     <div class="post">
         <article>
-            <h2 class="titulo"><?php echo $post['titulo']; ?></h2>
-            <p class="fecha"><?php echo fecha($post['fecha']); ?></p>
-            <div class="thumb">
-                <img src="<?php echo RUTA; ?>/imagenes/<?php echo $post['thumb']; ?>" alt="<?php echo $post['titulo']; ?>">
-            </div>
-            <!-- la funcion nlbr nos respeta los espacios/saltos de linea -->
-            <p class="extracto"><?php echo nl2br($post['texto']); ?></p>
+            <h2 class="titulo">Iniciar Sesion</h2>
+            <form class="formulario" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+                <input type="text" name="usuario" placeholder="Usuario">
+                <input type="password" name="password" placeholder="Contraseña">
+                <input type="submit" value="iniciar Sesion">
+            </form>
         </article>
     </div>
 </div>
