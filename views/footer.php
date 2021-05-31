@@ -1,3 +1,3 @@
 <footer>
-    <p class="copyright">Copyrigt 2021 - Tiziana Amicarella </p>
+    <p class="copyrigt">Copyright 2021 - Tiziana Amicarella </p>
 </footer>
