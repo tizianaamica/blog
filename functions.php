@@ -73,4 +73,11 @@ function fecha($fecha){
     return $fecha;
 }
 
+function comprobarSession(){
+    //si la session no esta seteada redirigimos a RUTA
+    if (!isset($_SESSION['admin'])) {   
+        header('Location: ' . RUTA);
+    }
+}
+
 ?>
